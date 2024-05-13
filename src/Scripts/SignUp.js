@@ -22,6 +22,7 @@ function login(event) {
     } else {
         usuarios.push({email, senha})
         localStorage.setItem("usuarios", JSON.stringify(usuarios))
+        window.location.href = "../../Index.html"
     }
 }
 
