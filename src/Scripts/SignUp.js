@@ -17,11 +17,12 @@ function login(event) {
         alert("A senha não pode conter símbolos.")
     } else if (senha.length < 8) {
         alert("A senha deve ter pelo menos 8 caracteres.")
-    } else if (!senha === confirmarSen) {
+    } else if (senha !== confirmarSen) {
         alert("A senha não está igual!")
     } else {
         usuarios.push({email, senha})
         localStorage.setItem("usuarios", JSON.stringify(usuarios))
+        alert("Conta criada com sucesso!")
         window.location.href = "../../Index.html"
     }
 }
